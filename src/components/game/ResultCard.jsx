@@ -40,7 +40,7 @@ function ResultCard({ result, onReset, playerScore, computerScore }) {
       />
 
       {/* Contenedor principal ajustado */}
-      <div className="relative z-10 w-120% max-w-4xl h-[90vh] flex flex-col items-center justify-center p-4">
+      <div className="relative z-10 w-full max-w-4xl h-[90vh] flex flex-col items-center justify-center p-4">
         {/* Contenedor del video al 80% del viewport */}
         <div className="relative w-full h-[80vh] bg-black bg-opacity-80 rounded-xl border-2 border-yellow-500 overflow-hidden">
           <video
@@ -57,7 +57,7 @@ function ResultCard({ result, onReset, playerScore, computerScore }) {
         </div>
 
         {/* Contenido inferior */}
-        <div className="w-full bg-black bg-opacity-80 rounded-b-xl border-2 border-t-0 border-yellow-400 p-4 mt-[-2px]">
+        <div className="w-full bg-black bg-opacity-80 rounded-b-xl border-2 border-t-0 border-yellow-400 p-4 mt-[-2px] flex flex-col items-center">
           <h2
             className={`text-2xl sm:text-3xl font-bold mb-2 text-center ${
               result === "player" ? "text-green-500" : "text-red-500"
@@ -66,7 +66,7 @@ function ResultCard({ result, onReset, playerScore, computerScore }) {
             {result === "player" ? "¡Felicidades!" : "¡Game Over!"}
           </h2>
 
-          <p className="text-lg sm:text-xl text-white mb-4 text-center">
+          <p className="text-lg sm:text-xl text-white mb-6 text-center">
             {result === "player"
               ? `Ganaste ${playerScore} a ${computerScore}`
               : `Perdiste ${computerScore} a ${playerScore}`}
@@ -74,7 +74,7 @@ function ResultCard({ result, onReset, playerScore, computerScore }) {
 
           <button
             onClick={onReset}
-            className="w-full max-w-xs mx-auto bg-yellow-400 hover:bg-yellow-600 text-black font-bold py-2 px-6 rounded-lg text-lg transition-colors"
+            className="w-full max-w-xs bg-yellow-400 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-lg text-lg transition-colors"
           >
             Jugar de nuevo
           </button>
