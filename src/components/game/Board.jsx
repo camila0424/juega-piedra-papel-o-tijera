@@ -6,7 +6,6 @@ import BoardImage from "../../images/board_image.jpg";
 import FinalDesktop from "../../images/final_desktop.png";
 import FinalMobile from "../../images/final_mobile.png";
 import ResultCard from "./ResultCard";
-import Header from "../layout/Header";
 
 const options = [
   { value: "piedra", label: "Piedra", img: Rock },
